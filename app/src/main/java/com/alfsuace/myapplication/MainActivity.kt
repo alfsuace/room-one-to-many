@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             studentRepo.saveStudent(student3,"1")
 
             val escuelas = schoolRepo.getSchool()
-            val estudiantesDadaEscuela = schoolRepo.getSchoolWithStudents("1")
+            val estudiantesDadaEscuela = studentRepo.getSchoolWithStudents("1")
             val estudiantes = studentRepo.getStudent()
 
             val paraBreakPoint=1

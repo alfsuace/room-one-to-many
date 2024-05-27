@@ -6,4 +6,5 @@ interface StudentRepository {
 
     fun saveStudent(student: Student, schoolId: String)
 
+    fun getSchoolWithStudents(schoolId: String): List<Student>
 }

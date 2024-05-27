@@ -15,14 +15,4 @@ class SchoolLocalDataRepository(private val schoolDao: SchoolDao){
         schoolDao.saveSchool(school.toEntity())
     }
 
-    fun getStudentsFromSchool(schoolId: String): List<Student> {
-        val studentsList = mutableListOf<Student>()
-        schoolDao.getSchoolWithStudents(schoolId).map { schoolWithStudents ->
-            schoolWithStudents.students.forEach{
-                studentsList.add(it.toModel())
-            }
-        }
-        return studentsList
-    }
-
 }

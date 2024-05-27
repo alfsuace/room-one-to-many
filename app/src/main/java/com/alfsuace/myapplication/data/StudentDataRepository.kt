@@ -12,4 +12,8 @@ class StudentDataRepository(private val studentLocalDataRepository: StudentLocal
     override fun saveStudent(student: Student, schoolId: String) {
         studentLocalDataRepository.saveStudents(student, schoolId)
     }
+
+    override fun getSchoolWithStudents(schoolId: String): List<Student> {
+        return studentLocalDataRepository.getStudentsFromSchool(schoolId)
+    }
 }
